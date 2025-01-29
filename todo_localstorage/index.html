@@ -1,0 +1,42 @@
+<!-- 輸入表單 todo list 
+bootstrap, SQLite, LocalStorage
+flask
+下拉式tags選單
+任務名稱、創建日期、完成日期、分類
+勾選完成
+-->
+
+<!DOCTYPE html>
+<html>
+    <title>ToDo list</title>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    </head>
+    <body>
+        <div class="container p-4 mx-5 my-3 bg-info vh-100 d-flex flex-column justify-content-center align-items-center">
+            <h1 class="fw-bold my-3">To-Do List 
+                <span class="fw-light fs-4 text-muted" id="date">Date</span>
+            </h1>
+            <form onsubmit="add(event)" class="w-75">
+                <div class="row input-group my-4 mx-0 border">
+                    <div class="col-md-8 p-0">
+                        <input type="text" class="form-control custom-input-lg" id="todo" placeholder="Task" required>
+                    </div>
+                    <div class="col-md-3 px-1">
+                        <input type="text" class="form-control custom-input-lg" id="tags" placeholder="Tags(optional)">
+                    </div>
+                    <div class="col-md-1 px-1">
+                        <button type="submit" class="btn btn-light custom-input-lg">Add</button>
+                    </div>
+                </div>
+            </form>
+            <ul id="lists">
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

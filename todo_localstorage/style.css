@@ -1,0 +1,23 @@
+.cool{
+    background-color: rgb(211, 220, 202);
+    list-style-type: none;
+    padding: 10px;
+    width: 500px;
+    /* border-radius: 25px; */
+    /* list-style-type:; */
+}
+
+h1{
+    font-size: 70px;
+}
+
+.check{
+    color: rgb(197, 242, 227);
+    border-radius: 25px;
+}
+
+.bg-info {
+    background: linear-gradient(to right, rgb(217, 233, 238), rgb(224, 238, 211)) /* 修改为自定义颜色 */
+}
+
+
