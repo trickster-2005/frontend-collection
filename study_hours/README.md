@@ -1,2 +1,2 @@
 # DEMO
-![](demo.gif)
+![](demo.png)
