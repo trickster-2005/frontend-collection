@@ -1,7 +1,7 @@
 // reference: https://www.youtube.com/watch?v=R1tfyVyU0hg&list=PLwUlLzAS3RYow0T9ZXB0IomwB-DyBRTfm&index=6&t=126s
 
 var scl = 50;
-var inc = 0.28;
+var inc = 0.22;
 var img;
 var imgs =[];
 var obj;
@@ -11,8 +11,8 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(img.width,img.height,WEBGL)
-    angleMode(DEGREES)
+    createCanvas(img.width,img.height,WEBGL);
+    angleMode(DEGREES);
     textureMode(NORMAL);
     noiseDetail(1);
     divide(); //分割一張照片給多個
@@ -20,7 +20,7 @@ function setup(){
 
 function draw(){
     background(0)    
-    translate(0,10,-80)
+    translate(0,-50,-200)
     rotateX(55)
     fill(255,100)
 
@@ -37,7 +37,7 @@ function draw(){
             let index = num_x*floor(height/scl) + num_y
             texture(imgs[index])
             num_y++
-            translate(x,y)
+            translate(x+25,y+100)
             box(scl,scl,-h)
             pop()
             yoff += inc;
